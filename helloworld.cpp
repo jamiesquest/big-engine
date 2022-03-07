@@ -27,6 +27,19 @@ int main(int argc, char * argv[]){
   hugelib myLib = hugelib();
 
   cout << "number: " << myLib.getNumber() << endl;
+  cout << "pi: " << myLib.pi << endl;
+
+  #ifdef MY_VAR
+
+    cout << "Using MY_VAR" << endl;
+    const double myValue = 12;
+    
+  #else
+    const double myValue = 10;
+
+  #endif
+
+  cout << "my value: " << myValue << endl;
 
   return 0;
 }
