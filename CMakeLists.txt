@@ -22,5 +22,5 @@ configure_file(helloConfig.h.in helloConfig.h)
 #includes
 target_include_directories(hello PUBLIC
                           "${PROJECT_BINARY_DIR}"
-                          "${PROJECT_SOURCE_DIR}/HugeLib"
+#                          "${PROJECT_SOURCE_DIR}/HugeLib"
                           )

@@ -3,7 +3,9 @@
 #include <string>
 
 #include "helloConfig.h"
-#include "hugelib.h"
+#ifdef MY_VAR
+  #include "hugelib.h"
+#endif
 
 using namespace std;
 
@@ -24,16 +26,17 @@ int main(int argc, char * argv[]){
 
   cout << msg << endl;
 
-  hugelib myLib = hugelib();
 
-  cout << "number: " << myLib.getNumber() << endl;
-  cout << "pi: " << myLib.pi << endl;
 
   #ifdef MY_VAR
-
     cout << "Using MY_VAR" << endl;
+
+    hugelib myLib = hugelib();
+
+    cout << "number: " << myLib.getNumber() << endl;
+    cout << "pi: " << myLib.pi << endl;
     const double myValue = 12;
-    
+
   #else
     const double myValue = 10;
 

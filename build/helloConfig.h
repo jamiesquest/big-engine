@@ -4,4 +4,4 @@
 
 #define hello_VERSION_MINOR 0
 
-#define MY_VAR
+/* #undef MY_VAR */
